@@ -24,7 +24,7 @@ RUN curl -sSL -o java.tar.gz "${URL}" && \
 	javac --version || javac -version
 
 # Only Gradle
-ENV GRADLE_VERSION=7.4.1 \
+ENV GRADLE_VERSION=7.4.2 \
 	PATH=/opt/gradle/bin:$PATH
 RUN dl_URL="https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.zip" && \
 	curl -sSL --fail --retry 3 $dl_URL -o gradle.zip && \
